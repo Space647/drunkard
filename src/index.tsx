@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
-import Card from './components/card';
+import Game from './components/game';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Card isPreWiew={false} item={{type:'booba',rang:'Q' }} />, document.getElementById('root'));
+ReactDOM.render(<Game/>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

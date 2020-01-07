@@ -1,5 +1,6 @@
 import React from 'react';
 
+import { ICard } from '../../interface/card';
 import crossIcon from '../../assets/icons/cross.png'
 import peakIcon from '../../assets/icons/peak.png';
 import chirvaIcon from '../../assets/icons/chirva.png';
@@ -9,14 +10,8 @@ import cx from './style.module.scss';
 
 interface Props {
     isPreWiew: boolean;
-    item: Item;
+    item: ICard;
 }
-
-interface Item {
-    type: 'cross' | 'peak' | 'chirva' | 'booba';
-    rang: '6' | '7' | '8' | '9' | '10' | 'J' | 'Q' | 'K' | 'A';
-}
-
 
 class Card extends React.Component<Props> {
 
@@ -30,7 +25,7 @@ class Card extends React.Component<Props> {
         return icon[type];
     }
 
-    createCard = ({type, rang}: Item) => {
+    createCard = ({type, rang}: ICard) => {
         const icon = this.getIcon(type);
         return (
             <div className={cx.card}>
